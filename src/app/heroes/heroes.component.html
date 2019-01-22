@@ -1,0 +1,11 @@
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <!-- *ngFor遍历组件中的heroes  (click)点击传给组件值 [class.xx]查找组件值 为true添加xx class-->
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero===selectedHero">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<!-- selectedHero传递给子组件hero -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
