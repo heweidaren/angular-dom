@@ -12,7 +12,7 @@ export class HeroesComponent implements OnInit {
   // 绑定英雄数组
   heroes: Hero[];
   //列表点击传值
-  selectedHero: Hero;
+  // selectedHero: Hero;
 
   constructor(
     //创建私有属性,标记为注入点
@@ -25,9 +25,9 @@ export class HeroesComponent implements OnInit {
   }
 
   //列表点击后把点击条目传给selectedHero
-  onSelect(hero: Hero) {
-    this.selectedHero = hero;
-  }
+  // onSelect(hero: Hero) {
+  //   this.selectedHero = hero;
+  // }
 
   //获取hero.serviece中的英雄数据传递给本组件heroes
   //subscribe等待远端获取数据
