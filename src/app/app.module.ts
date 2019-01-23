@@ -12,6 +12,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   //放置内部组件
@@ -20,7 +21,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeroSearchComponent
   ],
   // 放置外部模块
   imports: [

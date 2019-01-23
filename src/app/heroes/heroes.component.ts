@@ -35,5 +35,23 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes()
     .subscribe(heroes =>this.heroes=heroes);
   }
+  //添加新英雄
+  add(name: string):void {
+    //name 去除两边空格
+    name = name.trim();
+    if(!name){return;}
+    //传入参数name给服务 强行定位Hero格式
+    this.heroService.addHero(<Hero>{name})
+    //返回带id的hero
+    .subscribe(hero => {
+      this.heroes.push(hero)
+    })
+  }
+  //删除选中的英雄
+  delete(hero:Hero):void{
+    // 在服务器操作成功之前移除要删除的英雄
+    this.heroes=this.heroes.filter(h=>h!==hero);
+    this.heroService.deleteHero(hero).subscribe();
+  }
 
 }
